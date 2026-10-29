@@ -27,12 +27,6 @@ export function BrainViz() {
           <span className="chip">Marketing agent</span>
           <span className="chip">Ops agent</span>
         </div>
-        <div className="chips">
-          <span className="chip">HubSpot</span>
-          <span className="chip">Google</span>
-          <span className="chip">Microsoft</span>
-          <span className="chip">500+ connectors</span>
-        </div>
       </div>
     </div>
   );

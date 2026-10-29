@@ -569,32 +569,6 @@ a {
   font-weight: 500;
 }
 
-.proto {
-  display: flex;
-  gap: 10px;
-}
-
-.screen {
-  flex: 1;
-  height: 96px;
-  border-radius: 12px;
-  border: 1px solid var(--line);
-  background: linear-gradient(180deg, var(--panel) 0 24%, var(--panel2) 24% 100%);
-  position: relative;
-}
-
-.screen::after {
-  content: "";
-  position: absolute;
-  left: 12px;
-  right: 30px;
-  top: 36px;
-  height: 7px;
-  border-radius: 4px;
-  background: var(--line);
-  box-shadow: 0 16px 0 var(--line), 0 32px 0 var(--line);
-}
-
 /* brain viz */
 .flow {
   display: grid;
@@ -651,12 +625,12 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 5px;
+  gap: 9px;
   height: 120px;
 }
 
 .wave i {
-  width: 5px;
+  width: 6px;
   border-radius: 3px;
   background: var(--accent);
   animation: wave 1.3s ease-in-out infinite;

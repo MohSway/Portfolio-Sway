@@ -8,6 +8,7 @@ import { Method } from "@/components/Method";
 import { Craft } from "@/components/Craft";
 import { Path } from "@/components/Path";
 import { Contact } from "@/components/Contact";
+import { ScrollMotion } from "@/components/ScrollMotion";
 
 export default function Home() {
   return (
@@ -24,6 +25,7 @@ export default function Home() {
         <Path />
         <Contact />
       </main>
+      <ScrollMotion />
     </div>
   );
 }

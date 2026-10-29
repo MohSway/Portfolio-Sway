@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Instrument_Serif, Inter, JetBrains_Mono } from "next/font/google";
+import { LenisProvider } from "@/components/LenisProvider";
 import { seo, site } from "@/content/site";
 import "./globals.css";
 
@@ -63,7 +64,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <a className="skip-link" href="#main">
           Skip to content
         </a>
-        {children}
+        <LenisProvider>{children}</LenisProvider>
       </body>
     </html>
   );

@@ -20,11 +20,6 @@ export function TiinkrViz() {
           </div>
         ))}
       </div>
-      <div className="proto">
-        <span className="screen"></span>
-        <span className="screen"></span>
-        <span className="screen"></span>
-      </div>
       <span className="mono">{tiinkr.vizCaption}</span>
     </div>
   );
