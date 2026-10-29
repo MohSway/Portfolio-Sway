@@ -1,0 +1,566 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Swayanshu Mohapatra | Product Manager and AI Builder</title>
+<meta name="description" content="Product manager and AI builder. I turn ideas into working AI products: agents, low-code apps and Tiinkr.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+*{box-sizing:border-box}
+a{color:inherit;text-decoration:none}
+.page{--bg:#090E0D;--panel:#101916;--panel2:#0C1311;--line:#1E2D29;--text:#EAEFEA;--muted:#93A8A0;--accent:#46E0B5;--ink:#03231B;--warm:#F3C97A;background:var(--bg);color:var(--text);font-family:'Inter',system-ui,sans-serif;font-size:17px;line-height:1.55;overflow-x:clip;width:100%}
+.wrap{max-width:1240px;margin:0 auto;padding:0 32px}
+.mono{font-family:'JetBrains Mono',ui-monospace,monospace;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.serif{font-family:'Instrument Serif',Georgia,serif;font-weight:400}
+
+/* nav */
+.nav{position:sticky;top:0;z-index:50;background:rgba(9,14,13,.84);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;height:68px}
+.mark{font-family:'Instrument Serif',Georgia,serif;font-size:30px;line-height:1}
+.mark span{color:var(--accent)}
+.navlinks{display:flex;gap:34px;font-size:15px;color:var(--muted)}
+.navlinks a:hover{color:var(--text)}
+.btn{display:inline-flex;align-items:center;gap:10px;min-height:46px;padding:0 24px;border-radius:999px;font-weight:500;font-size:15px;border:1px solid var(--line);transition:transform .2s,border-color .2s,color .2s}
+.btn-primary{background:var(--accent);color:var(--ink);border-color:var(--accent)}
+.btn-primary:hover{transform:translateY(-2px)}
+.btn-ghost:hover{border-color:var(--accent);color:var(--accent)}
+
+/* hero */
+.hero{position:relative;padding:96px 0 80px;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:72px 72px;opacity:.4;-webkit-mask-image:linear-gradient(180deg,#000 0%,transparent 80%);mask-image:linear-gradient(180deg,#000 0%,transparent 80%)}
+.hero-grid{position:relative;display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:56px;align-items:center}
+.eyebrow{display:inline-flex;align-items:center;gap:12px;margin:0 0 30px}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 4px rgba(70,224,181,.18);animation:pulse 2.4s ease-in-out infinite}
+.display{font-family:'Instrument Serif',Georgia,serif;font-weight:400;font-size:clamp(54px,7.4vw,108px);line-height:.96;letter-spacing:-.025em;margin:0 0 30px}
+.display em{font-style:italic;color:var(--accent)}
+.lede{font-size:19px;color:var(--muted);max-width:560px;margin:0 0 38px}
+.cta{display:flex;gap:14px;flex-wrap:wrap}
+
+/* prompt to app demo */
+.demo{background:var(--panel);border:1px solid var(--line);border-radius:24px;padding:20px;box-shadow:0 30px 80px rgba(0,0,0,.45)}
+.demo-bar{display:flex;align-items:center;gap:7px;margin-bottom:18px}
+.demo-bar i{width:10px;height:10px;border-radius:50%;background:var(--line)}
+.demo-bar span{margin-left:auto}
+.prompt{background:var(--panel2);border:1px solid var(--line);border-radius:14px;padding:14px 16px}
+.typed{display:block;margin-top:8px;font-family:'JetBrains Mono',ui-monospace,monospace;font-size:14px;color:var(--text);white-space:nowrap;overflow:hidden;width:44ch;max-width:100%;border-right:2px solid var(--accent);animation:type 5s steps(44) infinite alternate,blink .9s step-end infinite}
+.demo-arrow{display:flex;justify-content:center;padding:12px 0;color:var(--accent)}
+.app{background:#F3F1EA;color:#111;border-radius:16px;padding:18px;display:flex;flex-direction:column;gap:12px}
+.app-top{display:flex;justify-content:space-between;align-items:center;font-weight:600;font-size:15px}
+.app-pill{font-size:11px;padding:3px 10px;border-radius:999px;background:#CFF3E6;color:#0A4A38;font-weight:600}
+.app-row{display:flex;gap:10px;align-items:center;padding:10px 12px;background:#fff;border-radius:10px;font-size:13px;border:1px solid #E4E0D5}
+.app-row b{font-weight:600}
+.bar{height:8px;border-radius:4px;background:#E4E0D5}
+.app-btn{align-self:flex-start;background:#111;color:#fff;font-size:13px;padding:9px 16px;border-radius:999px;font-weight:500}
+
+/* marquee */
+.marquee{border-top:1px solid var(--line);border-bottom:1px solid var(--line);overflow:hidden;padding:20px 0;background:var(--panel2)}
+.track{display:flex;width:max-content;animation:scroll 34s linear infinite}
+.grp{display:flex;gap:48px;padding-right:48px;align-items:center}
+.mi{font-family:'Instrument Serif',Georgia,serif;font-size:30px;color:var(--muted);white-space:nowrap;display:inline-flex;align-items:center;gap:48px}
+.mi::after{content:"";width:9px;height:9px;background:var(--accent);transform:rotate(45deg);display:inline-block}
+
+/* section heads */
+.sec{padding:112px 0 24px}
+.sec-head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-bottom:56px}
+.sec-title{font-family:'Instrument Serif',Georgia,serif;font-weight:400;font-size:clamp(42px,5.2vw,76px);line-height:1;letter-spacing:-.02em;margin:0}
+.sec-title em{font-style:italic;color:var(--accent)}
+
+/* sticky work cards */
+.stack{position:relative;padding-bottom:40px}
+.card{position:sticky;top:calc(92px + var(--i)*20px);display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:44px;min-height:540px;padding:44px;margin-bottom:40px;background:var(--panel);border:1px solid var(--line);border-radius:30px;box-shadow:0 -28px 60px rgba(0,0,0,.4)}
+.card h3{font-family:'Instrument Serif',Georgia,serif;font-weight:400;font-size:clamp(44px,4.6vw,66px);line-height:1;letter-spacing:-.02em;margin:14px 0 16px}
+.card.feature{position:relative;top:auto;margin-bottom:0;border-color:rgba(70,224,181,.35)}
+.card .one{font-size:19px;color:var(--text);margin:0 0 26px;max-width:520px}
+.facts{display:grid;gap:16px;margin:0 0 26px}
+.fact{display:grid;grid-template-columns:96px minmax(0,1fr);gap:16px;padding-top:16px;border-top:1px solid var(--line);font-size:15px;color:var(--muted)}
+.fact b{font-weight:400;color:var(--text)}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:26px}
+.tag{font-family:'JetBrains Mono',ui-monospace,monospace;font-size:12px;padding:6px 12px;border:1px solid var(--line);border-radius:999px;color:var(--muted)}
+.tag.hot{border-color:var(--accent);color:var(--accent)}
+.link{display:inline-flex;align-items:center;gap:10px;color:var(--accent);font-weight:500}
+.link:hover{gap:16px}
+.viz{background:var(--panel2);border:1px solid var(--line);border-radius:22px;padding:26px;display:flex;flex-direction:column;justify-content:center;gap:16px;min-height:380px;position:relative;overflow:hidden}
+
+/* tiinkr viz */
+.steps{display:flex;gap:8px;flex-wrap:wrap}
+.step{flex:1 1 auto;padding:10px 12px;border:1px solid var(--line);border-radius:12px;font-size:13px;color:var(--muted);display:flex;gap:8px;align-items:center}
+.step.on{border-color:var(--accent);color:var(--text);background:rgba(70,224,181,.08)}
+.doc{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:18px;display:flex;flex-direction:column;gap:12px}
+.doc h4{margin:0;font-family:'Instrument Serif',Georgia,serif;font-weight:400;font-size:26px}
+.doc-row{display:flex;justify-content:space-between;gap:12px;font-size:14px;color:var(--muted);padding:10px 12px;border-radius:10px;background:var(--panel2);border:1px solid var(--line)}
+.doc-row b{color:var(--text);font-weight:500}
+.proto{display:flex;gap:10px}
+.screen{flex:1;height:96px;border-radius:12px;border:1px solid var(--line);background:linear-gradient(180deg,var(--panel) 0 24%,var(--panel2) 24% 100%);position:relative}
+.screen::after{content:"";position:absolute;left:12px;right:30px;top:36px;height:7px;border-radius:4px;background:var(--line);box-shadow:0 16px 0 var(--line),0 32px 0 var(--line)}
+
+/* brain viz */
+.flow{display:grid;gap:12px}
+.node{padding:12px 14px;border:1px solid var(--line);border-radius:12px;background:var(--panel);font-size:14px;display:flex;justify-content:space-between;gap:12px;align-items:center}
+.node.accent{border-color:var(--accent);background:rgba(70,224,181,.08)}
+.lanes{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{font-size:13px;padding:7px 12px;border-radius:999px;background:var(--panel);border:1px solid var(--line);color:var(--muted)}
+.join{height:18px;margin:0 auto;border-left:1px dashed var(--accent);width:0}
+
+/* voice viz */
+.wave{display:flex;align-items:center;justify-content:center;gap:5px;height:120px}
+.wave i{width:5px;border-radius:3px;background:var(--accent);animation:wave 1.3s ease-in-out infinite;transform-origin:center}
+.wave i:nth-child(3n){animation-delay:.25s}
+.wave i:nth-child(3n+1){animation-delay:.55s}
+.wave i:nth-child(4n){animation-delay:.8s}
+.bubble{max-width:82%;padding:12px 16px;border-radius:16px;font-size:14px;background:var(--panel);border:1px solid var(--line)}
+.bubble.me{align-self:flex-end;background:rgba(70,224,181,.1);border-color:rgba(70,224,181,.4)}
+
+/* layered screens */
+.layers{position:relative;height:340px}
+.layer{position:absolute;width:76%;height:210px;border-radius:16px;border:1px solid var(--line);background:var(--panel);padding:16px;display:flex;flex-direction:column;gap:10px}
+.layer:nth-child(1){left:0;top:0;opacity:.55}
+.layer:nth-child(2){left:12%;top:60px;opacity:.8}
+.layer:nth-child(3){left:24%;top:120px;border-color:var(--accent);background:#0F1D19}
+
+/* stats */
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-top:16px}
+.stat{padding:44px 28px;border-right:1px solid var(--line)}
+.stat:last-child{border-right:0}
+.stat .big{font-family:'Instrument Serif',Georgia,serif;font-size:clamp(36px,4.2vw,60px);line-height:1;color:var(--accent);margin:0 0 12px;white-space:nowrap}
+.stat p{margin:0;color:var(--muted);font-size:15px}
+
+/* method */
+.method{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px}
+.mstep{padding:28px 24px 32px;border:1px solid var(--line);border-radius:22px;background:var(--panel);transition:transform .3s,border-color .3s}
+.mstep:hover{transform:translateY(-6px);border-color:var(--accent)}
+.mstep .n{font-family:'Instrument Serif',Georgia,serif;font-size:72px;line-height:1;color:var(--line);margin:0 0 40px}
+.mstep h4{margin:0 0 10px;font-size:21px;font-weight:500}
+.mstep p{margin:0;color:var(--muted);font-size:15px}
+
+/* craft bento */
+.bento{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:20px}
+.tile{padding:32px;border:1px solid var(--line);border-radius:24px;background:var(--panel);display:flex;flex-direction:column;gap:18px}
+.tile h4{margin:0;font-family:'Instrument Serif',Georgia,serif;font-weight:400;font-size:34px}
+.tile p{margin:0;color:var(--muted);font-size:15px}
+.t-a{grid-column:span 4}
+.t-b{grid-column:span 2}
+.t-c{grid-column:span 2}
+.t-d{grid-column:span 4}
+
+/* path */
+.path{border-top:1px solid var(--line)}
+.row{display:grid;grid-template-columns:200px minmax(0,1fr) 220px;gap:24px;padding:30px 0;border-bottom:1px solid var(--line);align-items:baseline;transition:padding .3s}
+.row:hover{padding-left:16px}
+.row h4{margin:0 0 6px;font-size:21px;font-weight:500}
+.row p{margin:0;color:var(--muted);font-size:15px}
+.row .org{text-align:right;color:var(--text)}
+
+/* contact */
+.contact{padding:140px 0 100px;text-align:center}
+.contact .display{font-size:clamp(52px,8vw,120px);margin:0 auto 36px;max-width:1000px}
+.foot{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding:28px 0 40px;border-top:1px solid var(--line);font-size:14px;color:var(--muted)}
+
+@keyframes pulse{0%,100%{box-shadow:0 0 0 4px rgba(70,224,181,.18)}50%{box-shadow:0 0 0 9px rgba(70,224,181,0)}}
+@keyframes type{from{width:0}to{width:44ch}}
+@keyframes blink{50%{border-color:transparent}}
+@keyframes scroll{to{transform:translateX(-50%)}}
+@keyframes wave{0%,100%{transform:scaleY(.3)}50%{transform:scaleY(1)}}
+
+@media (max-width:900px){
+.navlinks{display:none}
+.hero{padding:56px 0 56px}
+.hero-grid{grid-template-columns:1fr;gap:40px}
+.card{position:relative;top:auto;grid-template-columns:1fr;padding:26px;min-height:0}
+.viz{min-height:300px}
+.stats{grid-template-columns:repeat(2,minmax(0,1fr))}
+.stat:nth-child(2){border-right:0}
+.stat:nth-child(-n+2){border-bottom:1px solid var(--line)}
+.method{grid-template-columns:1fr 1fr}
+.bento{grid-template-columns:1fr}
+.t-a,.t-b,.t-c,.t-d{grid-column:auto}
+.row{grid-template-columns:1fr;gap:6px}
+.row .org{text-align:left}
+.sec{padding:80px 0 16px}
+.wrap{padding:0 20px}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.typed{width:44ch}}
+
+html.lenis,html.lenis body{height:auto}
+.lenis.lenis-smooth{scroll-behavior:auto!important}
+.lenis.lenis-stopped{overflow:hidden}
+.card{transform-origin:50% 0}
+</style>
+</head>
+<body>
+<div class="page" id="top">
+
+<header class="nav">
+<div class="wrap nav-in">
+<a class="mark" href="#top" aria-label="Swayanshu Mohapatra, home">SM<span>.</span></a>
+<nav class="navlinks" aria-label="Primary">
+<a href="#work">Tiinkr</a>
+<a href="#unifyapps">UnifyApps</a>
+<a href="#method">Method</a>
+<a href="#craft">Craft</a>
+<a href="#path">Path</a>
+</nav>
+<a class="btn btn-ghost" href="#contact">Say hello</a>
+</div>
+</header>
+
+<section class="hero">
+<div class="wrap hero-grid">
+<div>
+<p class="eyebrow mono"><span class="dot"></span>Product manager &middot; AI builder &middot; India</p>
+<h1 class="display">Ideas in.<br><em>Working AI products</em> out.</h1>
+<p class="lede">I'm Swayanshu. I started as a backend engineer, moved into product, and now spend my days on the UnifyApps Growth Team turning customer problems into deployed agents and apps. I built and deployed Tiinkr with Claude Code.</p>
+<div class="cta">
+<a class="btn btn-primary" href="#work">See the work
+<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12l7 7 7-7"/></svg></a>
+<a class="btn btn-ghost" href="/Swayanshu_Mohapatra_Resume.pdf" download>Download resume</a>
+</div>
+</div>
+
+<div class="demo" aria-label="Illustration: a prompt turning into an app">
+<div class="demo-bar"><i></i><i></i><i></i><span class="mono">prompt &rarr; app</span></div>
+<div class="prompt">
+<span class="mono">Prompt</span>
+<span class="typed">Build a meet-prep agent that reads our CRM.</span>
+</div>
+<div class="demo-arrow">
+<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v16M5 13l7 7 7-7"/></svg>
+</div>
+<div class="app">
+<div class="app-top"><span>Meet prep</span><span class="app-pill">Ready in seconds</span></div>
+<div class="app-row"><b>Account</b><span>Last call, open deals, key contacts</span></div>
+<div class="bar" style="width:92%"></div>
+<div class="bar" style="width:78%"></div>
+<div class="bar" style="width:55%"></div>
+<span class="app-btn">Send brief</span>
+</div>
+</div>
+</div>
+</section>
+
+<div class="marquee" aria-label="Tools and themes">
+<div class="track">
+<div class="grp">
+<span class="mi">Claude Code</span><span class="mi">Cursor</span><span class="mi">Multi-agent systems</span><span class="mi">Voice agents</span><span class="mi">Low-code / no-code</span><span class="mi">Prompt-to-app</span><span class="mi">Agentic loops</span><span class="mi">SQL &amp; analytics</span>
+</div>
+<div class="grp" aria-hidden="true">
+<span class="mi">Claude Code</span><span class="mi">Cursor</span><span class="mi">Multi-agent systems</span><span class="mi">Voice agents</span><span class="mi">Low-code / no-code</span><span class="mi">Prompt-to-app</span><span class="mi">Agentic loops</span><span class="mi">SQL &amp; analytics</span>
+</div>
+</div>
+</div>
+
+<section class="sec" id="work">
+<div class="wrap">
+<div class="sec-head">
+<h2 class="sec-title">Built on <em>my own</em></h2>
+<span class="mono">Personal project</span>
+</div>
+
+<article class="card feature">
+<div>
+<span class="mono">Co-founded &middot; Personal project</span>
+<h3>Tiinkr</h3>
+<p class="one">An AI product architect. Type an idea, get a structured PRD and a clickable prototype.</p>
+<div class="facts">
+<div class="fact"><span class="mono">The gap</span><b>An idea is one sentence. Testing it needs a PRD and a prototype first.</b></div>
+<div class="fact"><span class="mono">What I built</span><b>A Discover, Architect, Build flow with personas, feature epics and UX flows, plus Training Camp, a PM trainer that grades judgment.</b></div>
+<div class="fact"><span class="mono">How</span><b>Co-founded. I designed, coded and deployed it with Claude Code, and earlier Cursor.</b></div>
+</div>
+<div class="tags"><span class="tag hot">Live</span><span class="tag">Claude Code</span><span class="tag">Full-stack</span><span class="tag">AI chat</span></div>
+<a class="link" href="https://tiinkr.com">Try tiinkr.com
+<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+</div>
+<div class="viz" aria-label="Illustration of the Tiinkr flow">
+<div class="steps"><span class="step"><span class="mono">1</span>Discover</span><span class="step on"><span class="mono">2</span>Architect</span><span class="step"><span class="mono">3</span>Build</span></div>
+<div class="doc">
+<h4>PRD &middot; Meet-prep tool</h4>
+<div class="doc-row"><span>Persona</span><b>Account executive</b></div>
+<div class="doc-row"><span>Epic 1</span><b>Pre-call brief</b></div>
+<div class="doc-row"><span>Epic 2</span><b>CRM sync</b></div>
+</div>
+<div class="proto"><span class="screen"></span><span class="screen"></span><span class="screen"></span></div>
+<span class="mono">Illustrative UI</span>
+</div>
+</article>
+
+</div>
+</section>
+
+<section class="sec" id="unifyapps" style="padding-top:72px">
+<div class="wrap">
+<div class="sec-head">
+<h2 class="sec-title">Shipped at <em>UnifyApps</em></h2>
+<span class="mono">Growth Team &middot; Company work</span>
+</div>
+
+<div class="stack">
+
+<article class="card" style="--i:0">
+<div>
+<span class="mono">UnifyApps &middot; Internal AI agent</span>
+<h3>Unify Brain</h3>
+<p class="one">The internal AI agent for sales, marketing and ops, built as a team of agents.</p>
+<div class="facts">
+<div class="fact"><span class="mono">The problem</span><b>Repetitive work across sales, marketing and ops tools.</b></div>
+<div class="fact"><span class="mono">What I built</span><b>I architected a team of agents, each owning several tasks, routed across multiple LLMs: lighter models for volume, stronger ones for reasoning.</b></div>
+<div class="fact"><span class="mono">Reach</span><b>HubSpot, Google and Microsoft suites, and 500+ connectors.</b></div>
+</div>
+<div class="tags"><span class="tag hot">5+ hrs/day saved</span><span class="tag">Multi-LLM routing</span><span class="tag">Adopted company-wide</span></div>
+</div>
+<div class="viz" aria-label="Illustration of model routing">
+<div class="flow">
+<div class="node"><span>Request</span><span class="mono">from a teammate</span></div>
+<span class="join"></span>
+<div class="node accent"><span>Router</span><span class="mono">picks the model</span></div>
+<div class="lanes">
+<div class="node"><span>Light model</span><span class="mono">volume</span></div>
+<div class="node"><span>Strong model</span><span class="mono">reasoning</span></div>
+</div>
+<span class="join"></span>
+<div class="chips"><span class="chip">Sales agent</span><span class="chip">Marketing agent</span><span class="chip">Ops agent</span></div>
+<div class="chips"><span class="chip">HubSpot</span><span class="chip">Google</span><span class="chip">Microsoft</span><span class="chip">500+ connectors</span></div>
+</div>
+</div>
+</article>
+
+<article class="card" style="--i:1">
+<div>
+<span class="mono">UnifyApps &middot; Conversational AI</span>
+<h3>Voice, video and banking agents</h3>
+<p class="one">Agents that talk to customers, designed and deployed end to end.</p>
+<div class="facts">
+<div class="fact"><span class="mono">What I built</span><b>I designed and deployed voice, video avatar, banking and multi-agent committee workflows.</b></div>
+<div class="fact"><span class="mono">End to end</span><b>From the idea through backend workflows, low-code screens and custom code.</b></div>
+<div class="fact"><span class="mono">Also</span><b>Invoice OCR workflows that cut processing time by 70&ndash;80%.</b></div>
+</div>
+<div class="tags"><span class="tag hot">Voice</span><span class="tag">Video avatar</span><span class="tag">Banking</span><span class="tag">Regulated settings</span></div>
+</div>
+<div class="viz" aria-label="Illustration of a voice agent conversation">
+<div class="wave" aria-hidden="true">
+<i style="height:30px"></i><i style="height:64px"></i><i style="height:42px"></i><i style="height:92px"></i><i style="height:56px"></i><i style="height:110px"></i><i style="height:70px"></i><i style="height:38px"></i><i style="height:84px"></i><i style="height:104px"></i><i style="height:48px"></i><i style="height:76px"></i><i style="height:34px"></i><i style="height:96px"></i><i style="height:58px"></i><i style="height:80px"></i><i style="height:40px"></i><i style="height:68px"></i><i style="height:28px"></i><i style="height:88px"></i><i style="height:52px"></i><i style="height:72px"></i><i style="height:36px"></i><i style="height:60px"></i>
+</div>
+<div class="bubble">Hi, how can I help with your account today?</div>
+<div class="bubble me">I'd like to check my recent transactions.</div>
+<span class="mono">Illustrative conversation</span>
+</div>
+</article>
+
+<article class="card" style="--i:2">
+<div>
+<span class="mono">UnifyApps &middot; Daily work</span>
+<h3>Prompt to full application</h3>
+<p class="one">On the Growth Team, my day job is taking an idea to a working app on a low-code/no-code platform.</p>
+<div class="facts">
+<div class="fact"><span class="mono">What I build</span><b>Agentic loops and flows where a plain-language prompt generates a complete, working application.</b></div>
+<div class="fact"><span class="mono">With customers</span><b>Proof-of-concept work for a large enterprise account: APIs, integrations, RBAC, triggers and DLQ handling with their engineers.</b></div>
+<div class="fact"><span class="mono">Also</span><b>A multi-agent workspace for a government healthcare client.</b></div>
+</div>
+<div class="tags"><span class="tag hot">$850K+ new deals driven</span><span class="tag">Low-code / no-code</span><span class="tag">Enterprise PoCs</span></div>
+</div>
+<div class="viz" aria-label="Illustration of layered app screens">
+<div class="layers">
+<div class="layer"><span class="mono">Workflow</span><div class="bar" style="background:var(--line);width:80%"></div><div class="bar" style="background:var(--line);width:60%"></div></div>
+<div class="layer"><span class="mono">Screens</span><div class="bar" style="background:var(--line);width:70%"></div><div class="bar" style="background:var(--line);width:88%"></div></div>
+<div class="layer"><span class="mono" style="color:var(--accent)">Working app</span><div class="bar" style="background:var(--accent);width:64%"></div><div class="bar" style="background:var(--line);width:80%"></div><div class="bar" style="background:var(--line);width:46%"></div></div>
+</div>
+</div>
+</article>
+
+</div>
+</div>
+</section>
+
+<div class="wrap">
+<p class="mono" style="margin:96px 0 0">At UnifyApps</p>
+<div class="stats">
+<div class="stat"><p class="big">5+ hrs</p><p>saved per day for Sales and Product by one internal agent</p></div>
+<div class="stat"><p class="big">$850K+</p><p>in new deals driven independently</p></div>
+<div class="stat"><p class="big">70&ndash;80%</p><p>less processing time with invoice OCR workflows</p></div>
+<div class="stat"><p class="big">500+</p><p>connectors orchestrated by one agent team</p></div>
+</div>
+</div>
+
+<section class="sec" id="method">
+<div class="wrap">
+<div class="sec-head">
+<h2 class="sec-title">How I <em>work</em></h2>
+<span class="mono">Problem to adoption</span>
+</div>
+<div class="method">
+<div class="mstep"><p class="n">01</p><h4>Find the real problem</h4><p>Sit with the people who have it. Size it in time, money or risk before building anything.</p></div>
+<div class="mstep"><p class="n">02</p><h4>Ship a v1 in days</h4><p>Prototype with Claude Code, agents or no-code, whichever gets there fastest.</p></div>
+<div class="mstep"><p class="n">03</p><h4>Get it used</h4><p>Onboard the first users, watch what they do, and fix what gets in the way.</p></div>
+<div class="mstep"><p class="n">04</p><h4>Scale, change or kill</h4><p>Decide quickly, and say why.</p></div>
+</div>
+</div>
+</section>
+
+<section class="sec" id="craft">
+<div class="wrap">
+<div class="sec-head">
+<h2 class="sec-title">The <em>craft</em></h2>
+<span class="mono">Tools I reach for</span>
+</div>
+<div class="bento">
+<div class="tile t-a"><h4>AI-first building</h4><p>AI is my default way to research, build and ship.</p>
+<div class="chips"><span class="chip">Claude Code</span><span class="chip">Cursor</span><span class="chip">Multi-agent systems</span><span class="chip">Agentic loops</span><span class="chip">Multi-LLM routing</span><span class="chip">Prompt engineering</span><span class="chip">Voice agents</span></div></div>
+<div class="tile t-b"><h4>Low-code / no-code</h4><p>Workflows, agent apps and screens on a platform.</p>
+<div class="chips"><span class="chip">APIs</span><span class="chip">Triggers</span><span class="chip">RBAC</span><span class="chip">DLQ</span></div></div>
+<div class="tile t-c"><h4>Data</h4><p>I build my own funnels and dashboards.</p>
+<div class="chips"><span class="chip">SQL</span><span class="chip">BigQuery</span><span class="chip">Looker Studio</span><span class="chip">Power BI</span></div></div>
+<div class="tile t-d"><h4>Engineering roots</h4><p>Two years as a backend engineer, so I can debate trade-offs with engineers.</p>
+<div class="chips"><span class="chip">Python</span><span class="chip">Java</span><span class="chip">JavaScript</span><span class="chip">React</span><span class="chip">SpringBoot</span><span class="chip">Django</span><span class="chip">Docker</span><span class="chip">Kubernetes</span><span class="chip">AWS</span></div></div>
+</div>
+</div>
+</section>
+
+<section class="sec" id="path">
+<div class="wrap">
+<div class="sec-head">
+<h2 class="sec-title">The <em>path</em></h2>
+<span class="mono">Backend to product</span>
+</div>
+<div class="path">
+<div class="row"><span class="mono">Sep 2026 &ndash; Now</span><div><h4>Associate Product Manager, Growth Team</h4><p>Prompt-to-app flows, enterprise proof-of-concepts, multi-agent workspaces.</p></div><span class="org">UnifyApps</span></div>
+<div class="row"><span class="mono">Apr &ndash; Sep 2026</span><div><h4>Senior Product Analyst, Growth Team</h4><p>Built Unify Brain and drove new deals.</p></div><span class="org">UnifyApps</span></div>
+<div class="row"><span class="mono">Sep 2025 &ndash; Apr 2026</span><div><h4>Product Analyst, Growth Team</h4><p>Voice, video avatar and banking agents, and OCR automation.</p></div><span class="org">UnifyApps</span></div>
+<div class="row"><span class="mono">Jan 2024 &ndash; Aug 2025</span><div><h4>Software Developer</h4><p>Backend services, Kibana and Elasticsearch analytics, Keycloak access control.</p></div><span class="org">PwC India</span></div>
+<div class="row"><span class="mono">2023</span><div><h4>Software Engineering Intern</h4><p>Deployment automation and cloud cost dashboards.</p></div><span class="org">Walmart Global Tech</span></div>
+<div class="row"><span class="mono">2020 &ndash; 2024</span><div><h4>B.Tech, Electrical &amp; Electronics</h4><p>GPA 8.04.</p></div><span class="org">BIT Mesra</span></div>
+</div>
+</div>
+</section>
+
+<section class="contact" id="contact">
+<div class="wrap">
+<span class="mono">Open to AI product roles</span>
+<h2 class="display" style="margin-top:20px">Have a messy problem? <em>Let's ship a v1.</em></h2>
+<div class="cta" style="justify-content:center">
+<a class="btn btn-primary" href="mailto:goluharris11@gmail.com">goluharris11@gmail.com</a>
+<a class="btn btn-ghost" href="https://linkedin.com/in/swayanshu-mohapatra">LinkedIn</a>
+<a class="btn btn-ghost" href="https://tiinkr.com">Tiinkr</a>
+</div>
+</div>
+<div class="wrap" style="margin-top:120px">
+<div class="foot"><span>&copy; 2026 Swayanshu Mohapatra</span><span>Designed and built with Claude Code</span></div>
+</div>
+</section>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.3.18/dist/lenis.min.js"></script>
+<script>
+(function () {
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (reduce || !window.gsap || !window.ScrollTrigger || !window.Lenis) return; // content stays visible without JS or libs
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  // 1. Smooth scroll, driven by GSAP's ticker so ScrollTrigger stays in sync
+  var lenis = new Lenis({ lerp: 0.1, smoothWheel: true });
+  lenis.on('scroll', ScrollTrigger.update);
+  gsap.ticker.add(function (t) { lenis.raf(t * 1000); });
+  gsap.ticker.lagSmoothing(0);
+
+  document.querySelectorAll('a[href^="#"]').forEach(function (a) {
+    a.addEventListener('click', function (e) {
+      var id = a.getAttribute('href');
+      if (id.length > 1 && document.querySelector(id)) {
+        e.preventDefault();
+        lenis.scrollTo(id, { offset: -68, duration: 1.4 });
+      }
+    });
+  });
+
+  // 2. Hero: headline words rise in, demo card eases up
+  var h1 = document.querySelector('.hero .display');
+  var words = [];
+  (function split(node) {
+    Array.prototype.slice.call(node.childNodes).forEach(function (n) {
+      if (n.nodeType === 3) {
+        var frag = document.createDocumentFragment();
+        n.textContent.split(/(\s+)/).forEach(function (part) {
+          if (!part.trim()) { frag.appendChild(document.createTextNode(part)); return; }
+          var s = document.createElement('span');
+          s.style.display = 'inline-block';
+          s.textContent = part;
+          words.push(s);
+          frag.appendChild(s);
+        });
+        node.replaceChild(frag, n);
+      } else if (n.nodeType === 1 && n.tagName !== 'BR') { split(n); }
+    });
+  })(h1);
+  gsap.from(words, { yPercent: 60, opacity: 0, duration: 1.1, ease: 'power4.out', stagger: 0.07, delay: 0.1 });
+  gsap.from('.hero .eyebrow, .hero .lede, .hero .cta', { y: 24, opacity: 0, duration: 0.9, ease: 'power3.out', stagger: 0.12, delay: 0.5 });
+  gsap.from('.demo', { y: 60, opacity: 0, duration: 1.2, ease: 'power3.out', delay: 0.4 });
+  gsap.to('.demo', { yPercent: -8, ease: 'none', scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: true } });
+
+  // 3. Marquee speeds up with scroll velocity
+  var track = document.querySelector('.track');
+  if (track) {
+    track.style.animation = 'none';
+    var x = 0, speed = 0.6;
+    gsap.ticker.add(function () {
+      var v = Math.min(Math.abs(lenis.velocity || 0), 40);
+      x -= speed + v * 0.15;
+      var half = track.scrollWidth / 2;
+      if (-x >= half) x += half;
+      track.style.transform = 'translate3d(' + x + 'px,0,0)';
+    });
+  }
+
+  // 4. Section heads and grid items reveal on scroll
+  gsap.utils.toArray('.sec-head, .mstep, .tile, .row, .stat').forEach(function (el, i) {
+    gsap.from(el, { y: 48, opacity: 0, duration: 0.9, ease: 'power3.out',
+      scrollTrigger: { trigger: el, start: 'top 88%', toggleActions: 'play none none none' } });
+  });
+
+  // 5. Sticky work cards: each card scales back and dims as the next one covers it
+  var cards = gsap.utils.toArray('.stack .card');
+  var mm = gsap.matchMedia();
+  mm.add('(min-width: 901px)', function () {
+    cards.forEach(function (card, i) {
+      if (i === cards.length - 1) return;
+      gsap.to(card, { scale: 0.94, opacity: 0.55, ease: 'none',
+        scrollTrigger: { trigger: cards[i + 1], start: 'top 85%', end: 'top 25%', scrub: true } });
+    });
+  });
+
+  // 6. Stat count-up (skips ranges like 70-80%)
+  document.querySelectorAll('.stat .big').forEach(function (el) {
+    var txt = el.textContent;
+    if (txt.indexOf('–') > -1) return;
+    var m = txt.match(/\d+/);
+    if (!m) return;
+    var target = parseInt(m[0], 10), obj = { n: 0 };
+    ScrollTrigger.create({ trigger: el, start: 'top 85%', once: true, onEnter: function () {
+      gsap.to(obj, { n: target, duration: 1.4, ease: 'power2.out',
+        onUpdate: function () { el.textContent = txt.replace(m[0], Math.round(obj.n)); } });
+    } });
+  });
+
+  // 7. Magnetic buttons (fine pointers only)
+  if (window.matchMedia('(pointer: fine)').matches) {
+    document.querySelectorAll('.btn').forEach(function (b) {
+      b.addEventListener('mousemove', function (e) {
+        var r = b.getBoundingClientRect();
+        gsap.to(b, { x: (e.clientX - r.left - r.width / 2) * 0.25, y: (e.clientY - r.top - r.height / 2) * 0.35, duration: 0.3 });
+      });
+      b.addEventListener('mouseleave', function () { gsap.to(b, { x: 0, y: 0, duration: 0.5, ease: 'elastic.out(1,0.5)' }); });
+    });
+  }
+
+  // 8. Re-measure after fonts load
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(function () { ScrollTrigger.refresh(); });
+})();
+</script>
+
+</body>
+</html>
