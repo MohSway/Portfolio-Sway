@@ -22,7 +22,7 @@ const jetbrainsMono = JetBrains_Mono({
   weight: ["400", "500"],
 });
 
-const siteUrl = "https://swayanshu-mohapatra.vercel.app"; // [PLACEHOLDER] swap once a custom domain or final Vercel URL exists
+const siteUrl = "https://swayanshu-portfolio.vercel.app"; // [PLACEHOLDER] swap if a custom domain is added later
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
